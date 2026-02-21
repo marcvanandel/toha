@@ -16,7 +16,7 @@
       <div class="sidebar-tree">
         <ul class="tree" id="tree">
           {{ $blogSection := site.Params.features.blog.section | default "posts" }}
-          <li id="list-heading"><a href="{{ printf "/%s/" $blogSection | relLangURL }}" data-filter="all">{{ i18n "posts" }}</a></li>
+          <li id="list-heading"><a href="{{ print "/" $blogSection "/" | relLangURL }}" data-filter="all">{{ i18n "posts" }}</a></li>
           <div class="subtree">
             {{ partial "navigators/sidebar.html" (dict "menuName" "sidebar" "menuItems" site.Menus.sidebar "ctx" .) }}
           </div>
